@@ -1,0 +1,10 @@
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:    
+        return sum(s in J for s in S)
+    
+        count = 0
+        for letter1 in S:
+            for letter2 in J:
+                if letter1 == letter2:
+                    count += 1
+        return count
