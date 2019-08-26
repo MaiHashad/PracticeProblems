@@ -1,0 +1,3 @@
+class Solution:
+    def numTilePossibilities(self, tiles: str) -> int:
+        return len({s[:i] for s in itertools.permutations(tiles) for i in range(1, 8)})
